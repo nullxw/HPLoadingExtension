@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HPLoadingExtension"
-  s.version      = "0.0.0"
+  s.version      = "0.0.1"
   s.summary      = "HPTabBarController is loading extension for collection, table and scroll view to refresh data or continue loading"
   s.homepage     = "http://facebook.com/huyphams"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
