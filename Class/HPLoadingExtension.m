@@ -234,7 +234,7 @@
             [_refreshControl setFrame:frame];
         }
         
-        if (!refreshAnimating) {
+        if (!refreshAnimating && _scrollView.isTracking) {
             [_progressLayer setStrokeEnd:fabs(contentOffset/_progressDistanceTop)-0.15];
             [self updatePath];
         }
@@ -273,6 +273,14 @@
 - (void)addRefreshHandler:(void (^)(void))refreshHandler
 {
     _refreshHandler = refreshHandler;
+}
+
+- (void)setCircleColor:(UIColor *)circleColor
+{
+    _circleColor = circleColor;
+    [_refreshCircle setBackgroundColor:circleColor];
+    [_loadMoreCircle setBackgroundColor:circleColor];
+    [_progressLayer setStrokeColor:circleColor.CGColor];
 }
 
 @end
